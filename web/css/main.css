@@ -1,8 +1,59 @@
-body{
-    background-image: url("../img/bg2.jpg");
+body {
+    background-image: url("../img/bg4.jpeg");
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    min-height: 200px;
+    max-height: 700px;
+    position: relative;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    margin-top: 10px;
+    width: 900px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.mainMenu {
+    width: 250px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+#addButton {
+    background-color: #fff;
+}
+
+#addButton:hover {
+    background-color: #ad3f3f;
+}
+
+#saveButton {
+    background-color: #ce9756;
+}
+
+#saveButton:hover{
+    background-color: #2b53ac;
 }
