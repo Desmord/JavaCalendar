@@ -17,6 +17,7 @@ body {
     max-height: 700px;
     position: relative;
     border: 3px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255,255,255,0.3);
     border-radius: 15px;
     overflow: hidden;
     background-size: cover;
@@ -47,38 +48,52 @@ body {
 .item {
     width: 900px;
     height: 30px;
-    margin-top: 5px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: left;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     border-radius: 20px 20px;
-    background-color: #413b3b;
 }
 
 .item>* {
-    margin-left: 10px;
     width: 110px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #dedcdc;
 }
 
+.item :nth-child(1) {
+    border-radius: 15px 0px 0px 15px;
+}
+
+.item :nth-child(6) {
+    border-radius: 0px 15px 15px 0px;
+}
+
 .info {
     width: 110px;
     height: 30px;
-    background-color: #fff;
+    background-color: rgba(0,116,217,0.8);
     margin-left: 45px;
     border-radius: 20px 20px;
     transition: all 0.3s ease-out;
 }
 
 .info:hover {
-    background-color: #b3beb2;
+   background-color: rgba(0, 96, 180, 1);
     transform: scale(1.05);
     cursor: pointer;
+}
+
+.name{
+    width: 180px;
+    font-size: 15px;
+    margin-right: 3px;
+    background-color: rgba(0,116,217,0.8);
 }
 
 #addButton {
@@ -120,4 +135,27 @@ body {
     background-color: #b3beb2;
     transform: scale(1.05);
     cursor: pointer;
+}
+
+
+/*
+------------------------------
+    Colors for items backgrounds
+------------------------------
+*/
+
+.green {
+    background-color: rgba(46,204,64,0.8);
+}
+
+.red {
+    background-color: rgba(255,65,54,0.8);
+}
+
+.black {
+    background-color: rgba(17,17,17,0.8);
+}
+
+.orange{
+    background-color: rgba(242, 140, 5, 0.8);
 }
