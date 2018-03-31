@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .container {
@@ -16,16 +17,27 @@ body {
     max-height: 700px;
     position: relative;
     border: 3px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     overflow: hidden;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainMenu {
+    width: 1000px;
+    height: 40px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .items {
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     width: 900px;
     margin-right: 40px;
     display: flex;
@@ -34,26 +46,141 @@ body {
     flex-direction: column;
 }
 
-.mainMenu {
-    width: 250px;
+.item {
+    width: 900px;
+    height: 30px;
     margin-top: 10px;
+    display: flex;
     justify-content: center;
     align-items: left;
-    flex-direction: column;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 20px 20px;
+}
+
+.item>* {
+    width: 110px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dedcdc;
+}
+
+.item :nth-child(1) {
+    border-radius: 15px 0px 0px 15px;
+}
+
+.item :nth-child(6) {
+    border-radius: 0px 15px 15px 0px;
+}
+
+.info {
+    width: 110px;
+    height: 30px;
+    background-color: rgba(0, 116, 217, 0.8);
+    margin-left: 45px;
+    border-radius: 20px 20px;
+    transition: all 0.3s ease-out;
+}
+
+.info:hover {
+    background-color: rgba(0, 96, 180, 1);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.name {
+    width: 180px;
+    font-size: 15px;
+    margin-right: 3px;
+    background-color: rgba(0, 116, 217, 0.8);
 }
 
 #addButton {
-    background-color: #fff;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px;
+    color: rgba(85, 77, 77, 0.9);
+    background-color: rgba(201, 209, 200, 0.5);
+    font-size: 22px;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
 }
 
 #addButton:hover {
-    background-color: #ad3f3f;
+    background-color: #b3beb2;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 #saveButton {
-    background-color: #ce9756;
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px;
+    color: rgba(85, 77, 77, 0.9);
+    background-color: rgba(201, 209, 200, 0.5);
+    font-size: 22px;
+    font-weight: 700;
+    transition: all 0.3s linear;
 }
 
-#saveButton:hover{
-    background-color: #2b53ac;
+#saveButton:hover {
+    background-color: #b3beb2;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.legend {
+    width: 900px;
+    height: 20px;
+    margin-top: 5px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.legendItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.colorDiv {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px 20px;
+    margin-right: 5px;
+}
+
+
+/*
+------------------------------
+    Colors for items backgrounds
+------------------------------
+*/
+
+.green {
+    background-color: rgba(46, 204, 64, 0.8);
+}
+
+.red {
+    background-color: rgba(255, 65, 54, 0.8);
+}
+
+.black {
+    background-color: rgba(17, 17, 17, 0.8);
+}
+
+.orange {
+    background-color: rgba(242, 140, 5, 0.8);
 }

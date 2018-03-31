@@ -10,6 +10,7 @@
     <meta name="author" content="Mikołaj Chojnacki">
 
     <link rel="stylesheet" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 
     <title>Mikołaj Chojnacki</title>
@@ -20,15 +21,62 @@
 
     <div class="container">
 
-        <div class="items">
-            <div class="item">Lorem ipsum dolor sit.</div>
-            <div class="item">Lorem ipsum dolor sit.</div>
-            <div class="item">Lorem ipsum dolor sit.</div>
-        </div>
         <div class="mainMenu">
-            <div id="addButton">dodaj</div>
-            <div id="saveButton">zapisz</div>
+            <div id="addButton">Dodaj roślinę</div>
+            <div id="saveButton">Zapisz zmiany</div>
         </div>
+        
+        <div class="legend">
+            <div class="legendItem">
+                <div class="colorDiv green"></div>
+                  - wykonano
+            </div>
+            <div class="legendItem">
+                <div class="colorDiv red"></div>
+                  - wykonać
+            </div>
+            <div class="legendItem">
+                <div class="colorDiv black"></div>
+                  - nie dotyczy
+            </div>
+            <div class="legendItem">
+                <div class="colorDiv orange"></div>
+                  - do zapisu
+            </div>
+        </div>
+        
+        <div class="items">
+            <div class="item">
+                <div class="name black">nawza</div>
+                <div class="action green">data1</div>
+                <div class="action orange">data2</div>
+                <div class="action red">data3</div>
+                <div class="action black">
+                    <!-- puste bo nie dotyczy-->
+                </div>
+                <div class="action red">data4</div>
+                <div class="info">info</div>
+            </div>
+            <div class="item">
+                <div class="name black">nawza</div>
+                <div class="action">cz1</div>
+                <div class="action">cz2</div>
+                <div class="action">cz3</div>
+                <div class="action">cz4</div>
+                <div class="action">cz5</div>
+                <div class="info">info</div>
+            </div>
+            <div class="item">
+                <div class="name black">nawza</div>
+                <div class="action">cz1</div>
+                <div class="action">cz2</div>
+                <div class="action">cz3</div>
+                <div class="action">cz4</div>
+                <div class="action">cz5</div>
+                <div class="info">info</div>
+            </div>
+        </div>
+
 
     </div>
 
