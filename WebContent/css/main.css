@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .container {
@@ -20,17 +21,17 @@ body {
     overflow: hidden;
     background-size: cover;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .mainMenu {
     width: 1000px;
+    height: 40px;
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    align-items: left;
+    align-items: center;
 }
 
 .items {
@@ -49,18 +50,47 @@ body {
     align-items: left;
 }
 
-#addButton {
+.item :nth-child(7) {
     background-color: #fff;
 }
 
+#addButton {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px;
+    color: 	rgba(85, 77, 77,0.9);
+    background-color: rgba(201, 209, 200, 0.5);
+    font-size: 22px;
+    font-weight: 700;
+    transition: all 0.3s ease-out;
+}
+
 #addButton:hover {
-    background-color: #ad3f3f;
+    background-color: #b3beb2;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 #saveButton {
-    background-color: #ce9756;
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px;
+    color: 	rgba(85, 77, 77,0.9);
+    background-color: rgba(201, 209, 200, 0.5);
+    font-size: 22px;
+    font-weight: 700;
+    transition: all 0.3s linear;
 }
 
 #saveButton:hover {
-    background-color: #2b53ac;
+    background-color: #b3beb2;
+    transform: scale(1.05);
+    cursor: pointer;
 }
