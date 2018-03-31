@@ -22,6 +22,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.mainMenu {
+    width: 1000px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
 }
 
 .items {
@@ -34,12 +43,10 @@ body {
     flex-direction: column;
 }
 
-.mainMenu {
-    width: 250px;
-    margin-top: 10px;
+.item {
+    display: flex;
     justify-content: center;
     align-items: left;
-    flex-direction: column;
 }
 
 #addButton {
@@ -54,6 +61,6 @@ body {
     background-color: #ce9756;
 }
 
-#saveButton:hover{
+#saveButton:hover {
     background-color: #2b53ac;
 }
