@@ -56,7 +56,7 @@
                     puste bo nie dotyczy
                 </div>
                 <div class="action red">data4</div>
-                <div class="info">info</div>
+                <div class="info" name="nazwaROsliny">info</div>
             </div>
             <div class="item">
                 <div class="name black">nawza</div>
@@ -82,4 +82,22 @@
 
 	</div>
 </body>
+
+<script>
+        document.querySelector("#addButton").addEventListener("click",()=>{
+       
+        	  var xhr = new XMLHttpRequest();
+        	    xhr.onreadystatechange = function() {
+        	        if (xhr.readyState == 4) {
+        	            var data = xhr.responseText;
+        	            var text = document.querySelector(".items").innerHTML;
+        	            document.querySelector(".items").innerHTML = text+data;
+        	          
+        	        }
+        	    }
+        	    xhr.open('get', "${pageContext.request.contextPath}/LoginServlet", true);
+        	    xhr.send(null);
+        	
+        });
+	</script>
 </html>

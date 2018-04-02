@@ -4,32 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>proba jsp</title>
 </head>
 <body>
-	<!-- Deklaracja -->
-	<%!String name;%>
-	<!-- Inicjalizacja -->
-	<%
-		name = "Jan Kowalski";
-	%>
-
-	<!-- Wyrażenie -->
-	<h1>
-		Witaj
-		<%=name%>!
-	</h1>
-
-	<!-- Skryptlet -->
-	<%
-		for (int i = 0; i < 5; i++) {
-	%>
-	<p>
-		Paragraf numer
-		<%=i%></p>
-	<%
-		}
-	%>
 
 	<h1>Nazwa użytkownika:</h1>
 	<form action="${pageContext.request.contextPath}/LoginServlet"
@@ -55,8 +32,10 @@
         	        if (xhr.readyState == 4) {
         	            var data = xhr.responseText;
         	            document.querySelector("#przycisk1").innerHTML = data;
+        	          
         	        }
         	    }
+        	    xhr.open('get', "${pageContext.request.contextPath}/fragments/proba2.jspf", true);
         	    xhr.open('GET', "${pageContext.request.contextPath}/DataBaseConnect", true);
         	    xhr.send(null);
         	
