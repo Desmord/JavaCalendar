@@ -22,7 +22,7 @@
 	</br>
 	</br>
 
-	<jsp:include page='../fragments/proba2.jspf' />
+	<!--<jsp:include page='../fragments/proba2.jspf' /> -->
 </body>
 <script>
         document.querySelector("#przycisk1").addEventListener("click",()=>{
