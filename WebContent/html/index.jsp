@@ -95,7 +95,7 @@
         	          
         	        }
         	    }
-        	    xhr.open('get', "${pageContext.request.contextPath}/LoginServlet", true);
+        	    xhr.open('get', "${pageContext.request.contextPath}/PlantServlet", true);
         	    xhr.send(null);
         	
         });
