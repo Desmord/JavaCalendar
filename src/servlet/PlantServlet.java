@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.PlantDAO;
+import builders.PlantBuilder;
 import model.Plant;
 
 /**
@@ -33,6 +33,7 @@ public class PlantServlet extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
+		System.out.println("Witaj swiecie hasfgasjy");
 	}
 
 	/**
@@ -41,14 +42,33 @@ public class PlantServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("Witaj swiecie");
-		PlantDAO plantDAO = new PlantDAO();
-
-		Plant roslina = new Plant("roslinka", "2018-01-01", 1, "2018-01-01", 1, "2018-01-01", 1, "2018-01-01", 1,  "2018-01-01",
-				1, "opis pierwqszy", "opis drugi", "opius trzeci");
+//		System.out.println("Witaj swiecie");
+//		PlantDAO plantDAO = new PlantDAO();
+//
+//		Plant roslina = new Plant("roslinka", "2018-01-01", 1, "2018-01-01", 1, "2018-01-01", 1, "2018-01-01", 1,  "2018-01-01",
+//				1, "opis pierwqszy", "opis drugi", "opius trzeci");
+//		
+//		plantDAO.create(roslina);
 		
-		plantDAO.create(roslina);
-
+	Plant plant = new Plant.Builder().name("Rolsinka fg")
+									.sprayDate("2018-03-30")
+									.sprayDays(3)
+									.wateringDate("2018-03-03")
+									.wateringDays(3)
+									.exaggerationDate("2018-03-30")
+									.exaggerationDays(3)
+									.pruningDate("2018-04-04")
+									.pruningDays(4)
+									.fertilizationDate("2018-03-03")
+									.fertilizationDays(3)
+									.plantingDescription("Opis rosliny")
+									.wateringDescription("opis podlawania")
+									.requirementsDescription("Opis wymagan")
+									.build();
+	
+	System.out.println(plant.getName());
+	System.out.println("heh");
+	
 	}
 
 	/**

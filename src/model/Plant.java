@@ -128,6 +128,9 @@ public class Plant {
 		this.requirementsDescription = requirementsDescription;
 	}
 
+	public Plant() {
+	}
+
 	public Plant(String name, String spray, int sprayDay, String watering, int wateringDay, String exaggeration,
 			int exaggerationDay, String pruning, int pruningDay, String fertilization, int fertilizationDay,
 			String plantingDescrition, String wateringDescription, String requirementsDescription) {
@@ -148,4 +151,113 @@ public class Plant {
 		this.requirementsDescription = requirementsDescription;
 	}
 
+	public Plant(Builder builder) {
+		this.name = builder.name;
+		this.spray = builder.spray;
+		this.sprayDay = builder.sprayDay;
+		this.watering = builder.watering;
+		this.wateringDay = builder.wateringDay;
+		this.exaggeration = builder.exaggeration;
+		this.exaggerationDay = builder.exaggerationDay;
+		this.pruning = builder.pruning;
+		this.pruningDay = builder.pruningDay;
+		this.fertilization = builder.fertilization;
+		this.fertilizationDay = builder.fertilizationDay;
+		this.plantingDescrition = builder.plantingDescrition;
+		this.wateringDescription = builder.wateringDescription;
+		this.requirementsDescription = builder.requirementsDescription;
+	}
+
+	public static class Builder {
+		
+		private String name;
+		private String spray;
+		private int sprayDay;
+		private String watering;
+		private int wateringDay;	
+		private String exaggeration;
+		private int exaggerationDay;		
+		private String pruning;
+		private int pruningDay;	
+		private String fertilization;
+		private int fertilizationDay;		
+		private String plantingDescrition;
+		private String wateringDescription;
+		private String requirementsDescription;
+		
+		public Builder name(String name) {
+			this.name = name;
+			return this;
+		}
+		
+		public Builder sprayDate(String date) {
+			this.spray = date;
+			return this;
+		}
+		
+		public Builder sprayDays(int days) {
+			this.sprayDay = days;
+			return this;
+		}
+		
+		public Builder wateringDate(String date) {
+			this.watering = date;
+			return this;
+		}
+		
+		public Builder wateringDays(int days) {
+			this.wateringDay = days;
+			return this;
+		}
+		
+		public Builder exaggerationDate(String date) {
+			this.exaggeration = date;
+			return this;
+		}
+		
+		public Builder exaggerationDays(int days) {
+			this.exaggerationDay = days;
+			return this;
+		}
+		
+		public Builder pruningDate(String date) {
+			this.pruning = date;
+			return this;
+		}
+		
+		public Builder pruningDays(int days) {
+			this.pruningDay = days;
+			return this;
+		}
+		
+		public Builder fertilizationDate(String date) {
+			this.fertilization = date;
+			return this;
+		}
+		
+		public Builder fertilizationDays(int days) {
+			this.fertilizationDay = days;
+			return this;
+		}
+		
+		public Builder plantingDescription(String description) {
+			this.plantingDescrition = description;
+			return  this;
+		}
+		
+		public Builder wateringDescription(String description) {
+			this.wateringDescription = description;
+			return this;
+		}
+		
+		public Builder requirementsDescription(String description) {
+			this.requirementsDescription = description;
+			return this;
+		}
+		
+		public Plant build() {
+			return new Plant(this);
+		}
+		
+	}
 }
