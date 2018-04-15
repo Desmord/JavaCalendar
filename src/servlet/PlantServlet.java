@@ -31,8 +31,7 @@ public class PlantServlet extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-		System.out.println("Witaj swiecie hasfgasjy");
+
 	}
 
 	/**
